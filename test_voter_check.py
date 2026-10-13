@@ -43,12 +43,16 @@ class TestVoterCheck(unittest.TestCase):
 
     def test_while_loop_counts_down_from_5_to_1(self):
         self.assertEqual(self.lines[15:20],
-                         ["Polling station closes in 5 minutes"],
-                         ["Polling station closes in 4 minutes"],
-                         ["Polling station closes in 3 minutes"],
-                         ["Polling station closes in 2 minutes"],
-                         ["Polling station closes in 1 minutes"],)
+                         ["Polling station closes in 5 minutes",
+                         "Polling station closes in 4 minutes",
+                         "Polling station closes in 3 minutes",
+                         "Polling station closes in 2 minutes",
+                         "Polling station closes in 1 minutes",],
+                         )
 
     def test_ends_with_closed(self):
         self.assertEqual(self.lines[-1], "Closed")
         self.assertEqual(len(self.lines), 21)
+
+if __name__ == "__main__":
+    unittest.main()
