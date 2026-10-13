@@ -7,6 +7,9 @@ print("Age:", age)
 
 if age >= 65 and is_citizen:
     print("Eligible")
+    print("Senior")
+elif age >= 18 and is_citizen:
+    print("Eligible")
     print("General")
 else:
     print("Not eligible")
@@ -18,6 +21,9 @@ ages = [17, 18, 70]
 for voter_age in ages:
     print("Age:", voter_age)
     if voter_age >= 65 and is_citizen:
+        print("Eligible")
+        print("Senior")
+    elif voter_age >= 18 and is_citizen:
         print("Eligible")
         print("General")
     else:
